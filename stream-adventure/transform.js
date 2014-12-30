@@ -11,7 +11,7 @@ rs.on('end', function(chunk) {
 var through2 = require('through2');
 process.stdin
   .pipe(through2(function(chunk, enc, cbk) {
-    tr = chunk.toString().toUpperCase();
+    var tr = chunk.toString().toUpperCase();
     this.push(tr);
     cbk();
   }))
